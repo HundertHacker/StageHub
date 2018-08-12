@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>StageHub</title>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+
+		 <!-- Navbar-->
+		<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="index.html">StageHub</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="index.html">Candidatures</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="entreprises.html">Entreprises</a>
+		      </li>
+
+		      <li class="nav-item">
+		        <a class="nav-link" href="sites.html">Sites </a>
+		      </li>
+
+		      <li class="nav-item active">
+		        <a class="nav-link" href="CV.html">CV</a>
+		      </li>
+
+		      <li class="nav-item">
+		        <a class="nav-link" href="lettre_de_motivation.html">Lettres de Motivation</a>
+		      </li>
+		    </ul>
+		    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#nouveauCV">CV</button>
+		     <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#nouveauMotiv">Motiv</button>
+		     <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#nouvelleCand">Candidature</button>
+		     <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#nouvelleEntr">Entreprise</button>
+		     <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#nouveauSite">Site</button>
+		  </div>
+		</nav>
+		
+ 			<!-- Popup-->
+		  <div class="modal fade" id="nouveauCV" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">Nouveau CV</h4>
+		        </div>
+		        <div class="modal-body">
+		        	 <!-- Form-->
+		          <form>
+		        	  <div class="form-group">
+					    <label for="exampleInputText2">Nom du CV</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="exampleInputText2">Domaine</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>  
+
+		   			<!-- Popup-->
+		  <div class="modal fade" id="nouveauMotiv" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">Nouvelle Lttre de motivation</h4>
+		        </div>
+		        <div class="modal-body">
+		        	 <!-- Form-->
+		          <form>
+		        	 
+					  <div class="form-group">
+					    <label for="exampleInputText2">Titre</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="exampleInputText2">Domaine</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>  
+
+
+		 <!-- Popup-->
+		  <div class="modal fade" id="nouvelleCand" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">Nouvelle Candidature</h4>
+		        </div>
+		        <div class="modal-body">
+		        	 <!-- Form-->
+		          <form>
+		        	  <div class="form-group">
+					    <label for="exampleInputText2">Titre du stage</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputText2">Lien de la candidature</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputText1">Entrez le nom de l'entreprise</label>
+					    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Nom du projet">
+					    <small id="textHelp" class="form-text text-muted">Utilisez un nom explicite</small>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="exampleInputText2">Description du stage</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					   <div class="form-group">
+					    <label for="exampleInputText2">Localisation</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+
+					   <div class="form-group">
+					    <label for="exampleInputText2">Date de début</label>
+					    <input type="date" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="exampleInputText2">Durée</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>  
+
+
+
+		   <!-- Popup-->
+		  <div class="modal fade" id="nouvelleEntr" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">Nouvelle Entreprise</h4>
+		        </div>
+		        <div class="modal-body">
+		        	 <!-- Form-->
+		          <form>
+		        	  <div class="form-group">
+					    <label for="exampleInputText2">Nom de l'entreprise</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="exampleInputText2">Secteur d'activité</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputText2">Site internet</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					   <div class="form-group">
+					    <label for="exampleInputText2">Type</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted">Start-up, public, grand groupe</small>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>  
+
+
+
+		  <!-- Popup-->
+		  <div class="modal fade" id="nouveauSite" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">Nouveau Site</h4>
+		        </div>
+		        <div class="modal-body">
+		        	 <!-- Form-->
+		          <form>
+		        	  <div class="form-group">
+					    <label for="exampleInputText2">Nom du Site</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="exampleInputText2">Lien du site</label>
+					    <input type="text" class="form-control" id="exampleInputText2" aria-describedby="descriptionHelp" placeholder="(Description)">
+					    <small id="descriptionHelp" class="form-text text-muted"></small>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>  
+
+
+
+
+
+
+
+
+
+
+		  <div class="container">
+		  	<div class="row">
+		  	    <div class="col-lg-12 text-center"><h2>Liste des CV</h2></div>
+		  	</div>
+		  	<div class="row">
+
+		  	<table class="table" id="table">
+				  <thead class="thead-dark">
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Nom du CV</th>
+				      <th scope="col">Domaine</th>
+				      <th scope="col">note personnelle</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td><a href="cv_1.html">CV pour recherche de stage</a></td>
+				      <td>Datascience</td>
+				      <th >3/4</th>
+				    </tr>
+				   <tr>
+				      <th scope="row">1</th>
+				      <td><a href="cv_1.html">CV pour recherche de stage</a></td>
+				      <td>Datascience</td>
+				      <th >3/4</th>
+				    </tr>
+				    </tr>
+				     <tr>
+				     <th scope="row">1</th>
+				      <td><a href="cv_1.html">CV pour recherche de stage</a></td>
+				      <td>Datascience</td>
+				      <th >3/4</th>
+				    </tr>
+				  </tbody>
+				</table>
+						  	    
+		  	</div>
+		  </div>
+
+
+		  <script type="text/javascript">
+		  	$(document).ready(function() {
+			    $('#table').DataTable();
+			} );
+		  </script>
+
+
+
+	</body>
+</html>
